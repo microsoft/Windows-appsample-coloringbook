@@ -1,3 +1,7 @@
+﻿<!---
+  category: CustomUserInteractions TrialsAdsAndInAppPurchases FilesFoldersAndLibraries
+-->
+
 # Coloring Book UWP app sample
 
 Coloring Book is a Universal Windows Platform (UWP) app sample that
