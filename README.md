@@ -1,5 +1,5 @@
 ﻿<!---
-  category: CustomUserInteractions TrialsAdsAndInAppPurchases FilesFoldersAndLibraries
+  category: CustomUserInteractions Inking Printing TrialsAdsAndInAppPurchases FilesFoldersAndLibraries
 -->
 
 # Coloring Book UWP app sample
