@@ -6,7 +6,7 @@
 
 A mini-app that explores Windows Ink and Monetization features using the Windows Store.
 Specifically, it allows users to purchase coloring page collections and
-then color with Windows Ink.
+then color with Windows Ink. This sample runs on the Universal Windows Platform (UWP). 
 
 [![Using Ink in your UWP app video](Screenshots/Using_Ink_In_Your_UWP_App_Video.PNG)](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App "Channel 9 One Dev Minute video - Click to Watch")
 
