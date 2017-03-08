@@ -61,16 +61,28 @@
                 <AppBarButton Icon="Preview" Label="Print" Click="Print_Click" ToolTipService.ToolTip="Print"/>
                 <AppBarButton Icon="Delete" Label="Delete" Click="Delete_Click" ToolTipService.ToolTip="Delete"/>
             </CommandBar>
+
+
             <Viewbox Name="myViewbox" RelativePanel.Below="myCommandBar" RelativePanel.AlignHorizontalCenterWithPanel="True">
                 <ScrollViewer Name="myScrollViewer"  HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible" ZoomMode="Enabled"  HorizontalContentAlignment="Center">
-                    <Grid>
-                        <Image Name="myImage" ImageOpened="MyImage_Opened"/>
-                        <Viewbox>
-                            <InkCanvas x:Name="myInkCanvas"/>
-                        </Viewbox>
+                    <Grid x:Name="directContainer">
+                        <Grid x:Name="myImageContainer">
+                            <Image Name="myImage" ImageOpened="MyImage_Opened"/>
+                            <Viewbox>
+                                <InkCanvas x:Name="myInkCanvas"/>
+                            </Viewbox>
+                        </Grid>
                     </Grid>
                 </ScrollViewer>
             </Viewbox>
         </RelativePanel>
+        <Grid x:Name="Container"
+                  Grid.RowSpan="2"
+                  Opacity="0" />
+        <Grid x:Name="DirectPrintContainer">
+            <StackPanel x:Name="PrintableContent" Margin="50,20" Orientation="Vertical">
+                <Image x:Name="printImage" Visibility="Visible" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>

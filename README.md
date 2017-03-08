@@ -16,7 +16,7 @@ Coloring Book demonstrates:
 
 * Using the Windows.Services.Store API for managing in-app purchases
 * Customizing Windows Ink experiences with custom tools and pages
-* Saving Windows Ink onto an image
+* Saving Windows Ink onto an image using [Win2D](https://www.nuget.org/packages/Win2D.uwp)
 * Manipulating Windows Ink with other files to save, open, export, share, and print
 
 ## UWP development
@@ -66,9 +66,9 @@ Windows Ink:
 
 Printing:
 
-* PrintSample is slightly modified from the [Windows Printing
-    Sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Printing/cs)
-    – ColoringPage sends PhotoPrintHelper a stream to print.
+* Printing uses the [UWP Community Toolkit](http://www.nuget.org/packages/Microsoft.Toolkit.Uwp/) print helper.
+* UWP Community Toolkit print helper source can be seen on [GitHub](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp/Helpers/PrintHelper/PrintHelper.cs)
+    – ColoringPage sends UWP Toolkit PrintHelper an image to print.
 
 ## See also
 

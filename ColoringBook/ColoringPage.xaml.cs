@@ -39,7 +39,8 @@ using Windows.ApplicationModel.DataTransfer;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Windows.UI.Core;
-using PrintSample;
+using Microsoft.Toolkit.Uwp;
+using Windows.UI.Popups;
 
 namespace ColoringBook
 {
@@ -53,8 +54,6 @@ namespace ColoringBook
 
         // The name of the folder where the coloring page is saved in the app's Local folder
         private string _Foldername; 
-
-        private PhotosPrintHelper _PrintHelper;
 
         public ColoringPage()
         {
@@ -108,9 +107,6 @@ namespace ColoringBook
                 _Imgsrc = relpath.ToString();
             }
 
-            // Set up printing.
-            _PrintHelper = new PhotosPrintHelper(this);
-            _PrintHelper.RegisterForPrinting();
 
             // Adjust ScrollViewer size to Window.
             var bounds = Window.Current.Bounds;
@@ -120,8 +116,6 @@ namespace ColoringBook
             myImage.Source = new BitmapImage(new Uri("ms-appx:///" + _Imgsrc));
         }
 
-        // Must unregister for printing upon leaving the page.
-        protected override void OnNavigatedFrom(NavigationEventArgs e)=> _PrintHelper.UnregisterForPrinting();
         
         /// Match InkCanvas size to coloring image size.
         private void MyImage_Opened(object sender, RoutedEventArgs e)
@@ -269,16 +263,66 @@ namespace ColoringBook
             }
         }
 
+        PrintHelper printHelper;
         // Print coloring page.
         public async void Print_Click(object sender, RoutedEventArgs e)
         {
-            using (InMemoryRandomAccessStream inMemoryStream = new InMemoryRandomAccessStream())
-            {
-                await Save_InkedImagetoStream(inMemoryStream);
-                _PrintHelper.setStream(inMemoryStream);
-                await _PrintHelper.ShowPrintUIAsync();
-            }
+            StorageFolder folder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("PrintImageFolder", CreationCollisionOption.ReplaceExisting);
+            StorageFile printFile = await folder.CreateFileAsync("printFile.png", CreationCollisionOption.ReplaceExisting);
+            await Save_InkedImagetoFile(printFile);
 
+
+            var stream = await printFile.OpenReadAsync();
+            var bitmapImage = new BitmapImage();
+            bitmapImage.SetSource(stream);
+            printImage.Source = bitmapImage;
+
+            if (DirectPrintContainer.Children.Contains(PrintableContent))
+            { 
+                DirectPrintContainer.Children.Remove(PrintableContent);
+            }
+            printHelper = new PrintHelper(Container);
+            printHelper.AddFrameworkElementToPrint(PrintableContent);
+
+            printHelper.OnPrintCanceled += PrintHelper_OnPrintCanceled;
+            printHelper.OnPrintFailed += PrintHelper_OnPrintFailed;
+            printHelper.OnPrintSucceeded += PrintHelper_OnPrintSucceeded;
+            
+
+            await printHelper.ShowPrintUIAsync("Coloring book page");
+
+            await folder.DeleteAsync(StorageDeleteOption.PermanentDelete);
+        }
+
+        private async void PrintHelper_OnPrintSucceeded()
+        {
+            ReleasePrintHelper();
+            var dialog = new MessageDialog("Printing done.");
+            await dialog.ShowAsync();
+        }
+
+        private async void PrintHelper_OnPrintFailed()
+        {
+            ReleasePrintHelper();
+            var dialog = new MessageDialog("Printing failed.");
+            await dialog.ShowAsync();
+        }
+
+        private void PrintHelper_OnPrintCanceled()
+        {
+            ReleasePrintHelper();
+        }
+
+        private void ReleasePrintHelper()
+        {
+            printHelper.Dispose();
+
+            //While code could be used to re-add the printable content, it's not done here
+            //as it wasn't intended to be displayed.
+            /*if (!DirectPrintContainer.Children.Contains(PrintableContent))
+            {
+                DirectPrintContainer.Children.Add(PrintableContent);
+            }*/
         }
 
         private void ZoomIn_Click(object sender, RoutedEventArgs e) => myScrollViewer.ChangeView(myScrollViewer.HorizontalOffset, myScrollViewer.VerticalOffset, myScrollViewer.ZoomFactor + 0.2f);

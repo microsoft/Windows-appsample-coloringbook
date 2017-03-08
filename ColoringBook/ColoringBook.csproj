@@ -109,14 +109,9 @@
     <Compile Include="PickCollectionPage.xaml.cs">
       <DependentUpon>PickCollectionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PrintSample\ContinuationPage.xaml.cs">
-      <DependentUpon>ContinuationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PrintSample\PhotosPrintHelper.cs" />
     <Compile Include="PickColoringPage.xaml.cs">
       <DependentUpon>PickColoringPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PrintSample\PrintHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
@@ -245,10 +240,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PickCollectionPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PrintSample\ContinuationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
