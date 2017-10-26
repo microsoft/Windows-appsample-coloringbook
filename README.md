@@ -4,7 +4,7 @@
 
 # Coloring Book UWP app sample
 
-A mini-app that explores Windows Ink and Monetization features using the Windows Store.
+A mini-app that explores Windows Ink and Monetization features using the Microsoft Store.
 Specifically, it allows users to purchase coloring page collections and
 then color with Windows Ink. This sample runs on the Universal Windows Platform (UWP). 
 
