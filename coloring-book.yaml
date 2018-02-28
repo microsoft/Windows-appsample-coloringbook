@@ -1,0 +1,11 @@
+### YamlMime:Sample
+sample:
+- name: Coloring book sample
+  description: A mini-app that explores Windows Ink and Monetization features using the Microsoft Store.
+  generateZip: false
+  author: karler
+  languages:
+  - csharp
+  - xaml
+  technologies:
+  - windows
