@@ -21,12 +21,10 @@ Coloring Book demonstrates:
 
 ## UWP development
 
-This sample requires Visual Studio 2015 and the Windows Software
-Development Kit (SDK) for Windows 10 Anniversary. [Get a free copy of
-Visual Studio 2015 Community Edition](https://www.visualstudio.com/)
-with support for building UWP apps. Additionally, to be informed of the
-latest updates to Windows and the development tools, join the Windows
-Insider Program.
+This sample requires [Visual Studio 2017 and the latest version of the Windows 10 SDK](http://go.microsoft.com/fwlink/?LinkID=280676). You can use the free Visual Studio Community Edition to build and run Windows Universal Platform (UWP) apps. 
+
+To get the latest updates to Windows and the development tools, and to help shape their development, join 
+the [Windows Insider Program](https://insider.windows.com).
 
 ## Running the sample
 
