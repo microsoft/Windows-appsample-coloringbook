@@ -2,7 +2,8 @@
 sample:
 - name: Coloring book sample
   description: A mini-app that explores Windows Ink and Monetization features using the Microsoft Store.
-  generateZip: false
+  image: Screenshots/Using_Ink_In_Your_UWP_App_Video.PNG
+  generateZip: true
   author: karler
   languages:
   - csharp
