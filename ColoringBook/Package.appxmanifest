@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="ColoringBook" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="094ba03f-f3f5-4743-9a01-370a5d2baea3" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="ColoringBook" Publisher="CN=Microsoft" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="0cd6b493-db60-4aa8-8b94-16472f85b285" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Coloring Book</DisplayName>
-    <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
-    <Logo>Assets\NewStoreLogo.png</Logo>
+    <DisplayName>ColoringBook</DisplayName>
+    <PublisherDisplayName>Microsoft</PublisherDisplayName>
+    <Logo>Assets\ColoringBookStoreLogo.png</Logo>
   </Properties>
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.14393.0" MaxVersionTested="10.0.14393.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ColoringBook.App">
-      <uap:VisualElements DisplayName="Coloring Book" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ColoringBook" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+      <uap:VisualElements DisplayName="ColoringBook" Square150x150Logo="Assets\ColoringBookMedTile.png" Square44x44Logo="Assets\ColoringBookAppList.png" Description="ColoringBook" BackgroundColor="transparent">
+        <uap:LockScreen Notification="badge" BadgeLogo="Assets\ColoringBookBadgeLogo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\ColoringBookWideTile.png" Square310x310Logo="Assets\ColoringBookLargeTile.png" Square71x71Logo="Assets\ColoringBookSmallTile.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
             <uap:ShowOn Tile="wide310x150Logo" />
             <uap:ShowOn Tile="square310x310Logo" />
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:SplashScreen Image="Assets\ColoringBookSplashScreen.png" BackgroundColor="white" />
       </uap:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
-    <uap:Capability Name="picturesLibrary" />
   </Capabilities>
 </Package>

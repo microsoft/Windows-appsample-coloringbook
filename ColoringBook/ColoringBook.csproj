@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{455C8D99-9BC7-46AB-AD44-E497CAB9DF3B}</ProjectGuid>
+    <ProjectGuid>{C7C326F3-D103-4635-9D26-DAE9FD701FFC}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ColoringBook</RootNamespace>
@@ -16,20 +16,19 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-    <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;STOREASSOCIATION</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -42,6 +41,7 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -53,6 +53,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <OutputPath>bin\ARM\Release\</OutputPath>
@@ -65,6 +66,7 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -76,6 +78,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -88,34 +91,111 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="samples.ruleset" />
+    <PRIResource Include="Strings\en-US\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+    <Content Include="Assets\LibraryImages\animal\animal.png" />
+    <Content Include="Assets\LibraryImages\animal\animalHighResolution.png" />
+    <Content Include="Assets\LibraryImages\castle\castle.preprocessing" />
+    <Content Include="Assets\LibraryImages\castle\castle.thumbnail" />
+    <Content Include="Assets\LibraryImages\castle\castleHighResolution.preprocessing" />
+    <Content Include="Assets\LibraryImages\animal\animal.preprocessing" />
+    <Content Include="Assets\LibraryImages\animal\animal.thumbnail" />
+    <Content Include="Assets\LibraryImages\animal\animalHighResolution.preprocessing" />
+    <Content Include="Assets\LibraryImages\face\face.preprocessing" />
+    <Content Include="Assets\LibraryImages\face\face.thumbnail" />
+    <Content Include="Assets\LibraryImages\face\faceHighResolution.preprocessing" />
+    <Content Include="Assets\LibraryImages\flower\flower.preprocessing" />
+    <Content Include="Assets\LibraryImages\flower\flower.thumbnail" />
+    <Content Include="Assets\LibraryImages\flower\flowerHighResolution.preprocessing" />
+    <Content Include="Assets\LibraryImages\pineapple\pineapple.preprocessing" />
+    <Content Include="Assets\LibraryImages\pineapple\pineapple.thumbnail" />
+    <Content Include="Assets\LibraryImages\pineapple\pineappleHighResolution.preprocessing" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ColoringImage.cs" />
-    <Compile Include="ColoringPage.xaml.cs">
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\DeviceResolutionType.cs" />
+    <Compile Include="Common\Observable.cs" />
+    <Compile Include="Common\Tools.cs" />
+    <Compile Include="Views\ArtworkTemplateSelector.cs" />
+    <Compile Include="Components\CanvasInputController.cs" />
+    <Compile Include="Common\EventArgs.cs" />
+    <Compile Include="Components\InkCellController.cs" />
+    <Compile Include="Components\InkStrokeMathHelper.cs" />
+    <Compile Include="Components\NavigationController.cs" />
+    <Compile Include="Components\PhotoPrintHelper.cs" />
+    <Compile Include="Components\PrintHelper.cs" />
+    <Compile Include="Components\RadialControlHelper.cs" />
+    <Compile Include="Models\ColoringBookExport.cs" />
+    <Compile Include="UndoRedoOperations\AddStrokes.cs" />
+    <Compile Include="UndoRedoOperations\EraseAllCells.cs" />
+    <Compile Include="UndoRedoOperations\EraseAllStrokes.cs" />
+    <Compile Include="UndoRedoOperations\EraseCell.cs" />
+    <Compile Include="UndoRedoOperations\EraseStrokes.cs" />
+    <Compile Include="UndoRedoOperations\FillCell.cs" />
+    <Compile Include="UndoRedoOperations\UndoRedo.cs" />
+    <Compile Include="UndoRedoOperations\Operation.cs" />
+    <Compile Include="FileIO\ColoringBookColoringSettingsReader.cs" />
+    <Compile Include="FileIO\ColoringBookColoringSettingsWriter.cs" />
+    <Compile Include="FileIO\ColoringBookFileReader.cs" />
+    <Compile Include="FileIO\ColoringBookFileWriter.cs" />
+    <Compile Include="FileIO\ColorSettingsReader.cs" />
+    <Compile Include="FileIO\ColorSettingsWriter.cs" />
+    <Compile Include="FileIO\TapToFillReader.cs" />
+    <Compile Include="FileIO\TapToFillWriter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Models\ColoringBookBitmapLibraryImage.cs" />
+    <Compile Include="Models\ColoringBookColoring.cs" />
+    <Compile Include="Models\ColoringBookColoringSettings.cs" />
+    <Compile Include="Models\ColoringBookLibraryImage.cs" />
+    <Compile Include="Models\ColoringExporter.cs" />
+    <Compile Include="Models\DrawingTool.cs" />
+    <Compile Include="Models\LibraryThumbnail.cs" />
+    <Compile Include="Models\MyArtworkThumbnail.cs" />
+    <Compile Include="Models\Thumbnail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UndoRedoOperations\UndoRedoStrokeManager.cs" />
+    <Compile Include="ViewModels\ColorPaletteItem.cs" />
+    <Compile Include="ViewModels\ColorPalettePageViewModel.cs" />
+    <Compile Include="ViewModels\ColorPaletteState.cs" />
+    <Compile Include="Views\CanvasElements.cs" />
+    <Compile Include="Views\ColoringBookInkToolbar.xaml.cs">
+      <DependentUpon>ColoringBookInkToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColoringBookLoadingDialog.xaml.cs">
+      <DependentUpon>ColoringBookLoadingDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColoringBookPivotItem.xaml.cs">
+      <DependentUpon>ColoringBookPivotItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColoringPage.xaml.cs">
       <DependentUpon>ColoringPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Constants.cs" />
-    <Compile Include="ContinueColoringPage.xaml.cs">
-      <DependentUpon>ContinueColoringPage.xaml</DependentUpon>
+    <Compile Include="Views\ColoringPageController.cs" />
+    <Compile Include="Views\ColorPalette.xaml.cs">
+      <DependentUpon>ColorPalette.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MarkerPen.cs" />
-    <Compile Include="PickCollectionPage.xaml.cs">
-      <DependentUpon>PickCollectionPage.xaml</DependentUpon>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PickColoringPage.xaml.cs">
-      <DependentUpon>PickColoringPage.xaml</DependentUpon>
+    <Compile Include="Views\LibraryPivotItem.cs" />
+    <Compile Include="Views\MyArtworkPivotItem.cs" />
+    <Compile Include="Views\PreviewUnavailablePage.xaml.cs">
+      <DependentUpon>PreviewUnavailablePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WelcomePage.xaml.cs">
-      <DependentUpon>WelcomePage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="ViewModels\ColorPaletteViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\PivotItemViewModel.cs" />
+    <Compile Include="Components\VariableSizedGridView.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -123,131 +203,271 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\NewStoreLogo.scale-100.png" />
-    <Content Include="Assets\NewStoreLogo.scale-125.png" />
-    <Content Include="Assets\NewStoreLogo.scale-150.png" />
-    <Content Include="Assets\NewStoreLogo.scale-200.png" />
-    <Content Include="Assets\NewStoreLogo.scale-400.png" />
-    <Content Include="Assets\pen.png" />
-    <Content Include="Assets\pen100.png" />
-    <Content Include="Assets\pen2.png" />
-    <Content Include="Assets\pen200.png" />
-    <Content Include="Assets\pen48.png" />
-    <Content Include="Assets\SplashScreen.scale-100.png" />
-    <Content Include="Assets\SplashScreen.scale-125.png" />
-    <Content Include="Assets\SplashScreen.scale-150.png" />
-    <Content Include="Assets\SplashScreen.scale-400.png" />
-    <Content Include="Assets\Square150x150Logo.scale-100.png" />
-    <Content Include="Assets\Square150x150Logo.scale-125.png" />
-    <Content Include="Assets\Square150x150Logo.scale-150.png" />
-    <Content Include="Assets\Square150x150Logo.scale-400.png" />
-    <Content Include="Assets\Square310x310Logo.scale-100.png" />
-    <Content Include="Assets\Square310x310Logo.scale-125.png" />
-    <Content Include="Assets\Square310x310Logo.scale-150.png" />
-    <Content Include="Assets\Square310x310Logo.scale-200.png" />
-    <Content Include="Assets\Square310x310Logo.scale-400.png" />
-    <Content Include="Assets\Square44x44Logo.scale-100.png" />
-    <Content Include="Assets\Square44x44Logo.scale-125.png" />
-    <Content Include="Assets\Square44x44Logo.scale-150.png" />
-    <Content Include="Assets\Square44x44Logo.scale-400.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-16_altform-unplated.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-256_altform-unplated.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-32_altform-unplated.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png" />
-    <Content Include="Assets\Square71x71Logo.scale-100.png" />
-    <Content Include="Assets\Square71x71Logo.scale-125.png" />
-    <Content Include="Assets\Square71x71Logo.scale-150.png" />
-    <Content Include="Assets\Square71x71Logo.scale-200.png" />
-    <Content Include="Assets\Square71x71Logo.scale-400.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="Bios\cq.txt" />
-    <Content Include="Bios\dl.txt" />
-    <Content Include="Bios\eu.txt" />
-    <Content Include="Bios\nc.txt" />
-    <Content Include="Bios\lb.txt" />
-    <Content Include="Bios\sz.txt" />
-    <Content Include="Bios\zz.txt" />
-    <Content Include="Images\background.png" />
-    <Content Include="Images\crystal.png" />
-    <Content Include="Images\eu1.png" />
-    <Content Include="Images\eu2.png" />
-    <Content Include="Images\eu3.png" />
-    <Content Include="Images\eu4.png" />
-    <Content Include="Images\eu5.png" />
-    <Content Include="Images\nc1.png" />
-    <Content Include="Images\nc2.png" />
-    <Content Include="Images\nc0.png" />
-    <Content Include="Images\lb11.png" />
-    <Content Include="Images\lb14.png" />
-    <Content Include="Images\lb15.png" />
-    <Content Include="Images\sz3.png" />
-    <Content Include="Images\sz4.png" />
-    <Content Include="Images\hamburger.png" />
-    <Content Include="Images\lb5.png" />
-    <Content Include="Images\lb9.png" />
-    <Content Include="Images\lb8.png" />
-    <Content Include="Images\lb7.png" />
-    <Content Include="Images\lb6.png" />
-    <Content Include="Images\dl0.png" />
-    <Content Include="Images\cq1.png" />
-    <Content Include="Images\dl1.png" />
-    <Content Include="Images\dl2.png" />
-    <Content Include="Images\dl3.png" />
-    <Content Include="Images\lb1.png" />
-    <Content Include="Images\dl5.png" />
-    <Content Include="Images\dl6.png" />
-    <Content Include="Images\lb2.png" />
-    <Content Include="Images\lb4.png" />
-    <Content Include="Images\lb3.png" />
-    <Content Include="Images\sz5.png" />
-    <Content Include="Images\sz6.png" />
-    <Content Include="Images\sz7.png" />
-    <Content Include="Images\sz8.png" />
-    <Content Include="Images\zz1.png" />
-    <Content Include="Images\zz2.png" />
-    <Content Include="Images\zz3.png" />
-    <Content Include="Images\zz4.png" />
-    <Content Include="Images\zz5.png" />
-    <Content Include="Images\zz6.png" />
+    <Content Include="Assets\ColoringBookAppList.scale-100.png" />
+    <Content Include="Assets\ColoringBookAppList.scale-125.png" />
+    <Content Include="Assets\ColoringBookAppList.scale-150.png" />
+    <Content Include="Assets\ColoringBookAppList.scale-200.png" />
+    <Content Include="Assets\ColoringBookAppList.scale-400.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-16.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-16_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-20.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-20_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-24.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-256.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-256_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-30.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-30_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-32.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-32_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-36.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-36_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-40.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-40_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-48.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-60.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-60_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-64.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-64_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-72.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-72_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-80.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-80_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-96.png" />
+    <Content Include="Assets\ColoringBookAppList.targetsize-96_altform-unplated.png" />
+    <Content Include="Assets\ColoringBookBadgeLogo.scale-100.png" />
+    <Content Include="Assets\ColoringBookBadgeLogo.scale-125.png" />
+    <Content Include="Assets\ColoringBookBadgeLogo.scale-150.png" />
+    <Content Include="Assets\ColoringBookBadgeLogo.scale-200.png" />
+    <Content Include="Assets\ColoringBookBadgeLogo.scale-400.png" />
+    <Content Include="Assets\ColoringBookLargeTile.scale-100.png" />
+    <Content Include="Assets\ColoringBookLargeTile.scale-125.png" />
+    <Content Include="Assets\ColoringBookLargeTile.scale-150.png" />
+    <Content Include="Assets\ColoringBookLargeTile.scale-200.png" />
+    <Content Include="Assets\ColoringBookLargeTile.scale-400.png" />
+    <Content Include="Assets\ColoringBookMedTile.scale-100.png" />
+    <Content Include="Assets\ColoringBookMedTile.scale-125.png" />
+    <Content Include="Assets\ColoringBookMedTile.scale-150.png" />
+    <Content Include="Assets\ColoringBookMedTile.scale-200.png" />
+    <Content Include="Assets\ColoringBookMedTile.scale-400.png" />
+    <Content Include="Assets\ColoringBookSmallTile.scale-100.png" />
+    <Content Include="Assets\ColoringBookSmallTile.scale-125.png" />
+    <Content Include="Assets\ColoringBookSmallTile.scale-150.png" />
+    <Content Include="Assets\ColoringBookSmallTile.scale-200.png" />
+    <Content Include="Assets\ColoringBookSmallTile.scale-400.png" />
+    <Content Include="Assets\ColoringBookSplashScreen.scale-100.png" />
+    <Content Include="Assets\ColoringBookSplashScreen.scale-125.png" />
+    <Content Include="Assets\ColoringBookSplashScreen.scale-150.png" />
+    <Content Include="Assets\ColoringBookSplashScreen.scale-200.png" />
+    <Content Include="Assets\ColoringBookSplashScreen.scale-400.png" />
+    <Content Include="Assets\ColoringBookStoreLogo.scale-100.png" />
+    <Content Include="Assets\ColoringBookStoreLogo.scale-125.png" />
+    <Content Include="Assets\ColoringBookStoreLogo.scale-150.png" />
+    <Content Include="Assets\ColoringBookStoreLogo.scale-200.png" />
+    <Content Include="Assets\ColoringBookStoreLogo.scale-400.png" />
+    <Content Include="Assets\ColoringBookWideTile.scale-100.png" />
+    <Content Include="Assets\ColoringBookWideTile.scale-125.png" />
+    <Content Include="Assets\ColoringBookWideTile.scale-150.png" />
+    <Content Include="Assets\ColoringBookWideTile.scale-200.png" />
+    <Content Include="Assets\ColoringBookWideTile.scale-400.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-16_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-16_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-20_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-20_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-24_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-24_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-256_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-256_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-30_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-30_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-32_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-32_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-36_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-36_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-40_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-40_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-48_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-48_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-60_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-60_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-64_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-64_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-72_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-72_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-80_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-80_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-96_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookAppList.targetsize-96_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookBadgeLogo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookBadgeLogo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookBadgeLogo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookBadgeLogo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookBadgeLogo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookLargeTile.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookLargeTile.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookLargeTile.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookLargeTile.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookLargeTile.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookMedTile.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookMedTile.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookMedTile.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookMedTile.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookMedTile.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSmallTile.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSmallTile.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSmallTile.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSmallTile.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSmallTile.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSplashScreen.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSplashScreen.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSplashScreen.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSplashScreen.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookSplashScreen.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookStoreLogo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookStoreLogo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookStoreLogo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookStoreLogo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookStoreLogo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookWideTile.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookWideTile.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookWideTile.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookWideTile.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColoringBookWideTile.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-16_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-16_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-20_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-20_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-24_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-24_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-256_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-256_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-30_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-30_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-32_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-32_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-36_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-36_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-40_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-40_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-48_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-48_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-60_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-60_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-64_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-64_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-72_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-72_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-80_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-80_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-96_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookAppList.targetsize-96_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookBadgeLogo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookBadgeLogo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookBadgeLogo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookBadgeLogo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookBadgeLogo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookLargeTile.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookLargeTile.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookLargeTile.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookLargeTile.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookLargeTile.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookMedTile.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookMedTile.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookMedTile.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookMedTile.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookMedTile.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSmallTile.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSmallTile.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSmallTile.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSmallTile.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSmallTile.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSplashScreen.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSplashScreen.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSplashScreen.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSplashScreen.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookSplashScreen.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookStoreLogo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookStoreLogo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookStoreLogo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookStoreLogo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookStoreLogo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookWideTile.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookWideTile.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookWideTile.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookWideTile.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColoringBookWideTile.scale-400_contrast-white.png" />
+    <Content Include="Assets\DefaultThumbnail.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-100_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-100_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-100_contrast-white.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-125_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-125_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-125_contrast-white.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-150_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-150_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-150_contrast-white.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-200_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-200_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-200_contrast-white.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-400_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-400_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-400_contrast-white.png" />
+    <Content Include="Assets\Icons\test\ColoringBookAppList.scale-100.png" />
+    <Content Include="Assets\LibraryImages\castle\castle.png" />
+    <Content Include="Assets\LibraryImages\castle\castleHighResolution.png" />
+    <Content Include="Assets\LibraryImages\face\face.png" />
+    <Content Include="Assets\LibraryImages\face\faceHighResolution.png" />
+    <Content Include="Assets\LibraryImages\flower\flower.png" />
+    <Content Include="Assets\LibraryImages\flower\flowerHighResolution.png" />
+    <Content Include="Assets\LibraryImages\pineapple\pineapple.png" />
+    <Content Include="Assets\LibraryImages\pineapple\pineappleHighResolution.png" />
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ColoringPage.xaml">
+    <Page Include="Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ColoringBookInkToolbar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ContinueColoringPage.xaml">
+    <Page Include="Views\ColoringBookLoadingDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PickCollectionPage.xaml">
+    <Page Include="Views\ColoringBookPivotItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PickColoringPage.xaml">
+    <Page Include="Views\ColoringPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WelcomePage.xaml">
+    <Page Include="Views\ColorPalette.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PreviewUnavailablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

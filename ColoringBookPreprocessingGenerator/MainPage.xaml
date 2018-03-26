@@ -1,0 +1,89 @@
+﻿<!--  
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// The MIT License (MIT)
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE. 
+-->
+
+<Page
+    x:Class="ColoringBookPreprocessingGenerator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+                Margin="20">
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+            <SymbolIcon Symbol="Setting"/>
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="12,0,0,0">ColoringBook Preprocessing Generator</TextBlock>
+        </StackPanel>
+
+        <TextBlock Style="{StaticResource SubtitleTextBlockStyle}"
+                   Margin="0,40,0,0">
+            Choose Image to Process
+        </TextBlock>
+
+        <StackPanel Margin="20,20,0,0">
+            <StackPanel>
+                <Image x:Name="ImageToProcess"
+                       HorizontalAlignment="Left"
+                       MaxHeight="100"
+                       Source="{x:Bind ViewModel.ImageToProcess, Mode=OneWay}"
+                       />
+            </StackPanel>
+            <Button Margin="0,20,0,0"
+                    Click="{x:Bind ViewModel.LoadImage}">Load Image</Button>
+            <StackPanel Margin="0,20,0,0">
+                <TextBlock>Path:</TextBlock>
+                <TextBox IsEnabled="False"
+                         MinWidth="200"
+                         Text="{x:Bind ViewModel.ImagePath, Mode=OneWay}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <TextBlock Style="{StaticResource SubtitleTextBlockStyle}"
+                   Margin="0,40,0,0">
+            Processing
+        </TextBlock>
+
+
+        <StackPanel Margin="20,20,0,0">
+            <CheckBox IsChecked="{x:Bind ViewModel.ShouldConvertImage, Mode=TwoWay}">Convert white to transparent in image</CheckBox>
+            <CheckBox IsChecked="{x:Bind ViewModel.ShouldGeneratePreprocessing, Mode=TwoWay}">Generate Preprocessing</CheckBox>
+            <CheckBox IsChecked="{x:Bind ViewModel.ShouldOverwrite, Mode=TwoWay}">Overwrite Existing Files</CheckBox>
+
+            <Button Margin="0,20,0,0"
+                    Click="{x:Bind ViewModel.ChooseOutputDirectory}">Choose Output Directory</Button>
+            <StackPanel Margin="0,10,0,0">
+                <TextBlock>Path:</TextBlock>
+                <TextBox IsEnabled="False"
+                         MinWidth="200"
+                         Text="{x:Bind ViewModel.OutputPath, Mode=OneWay}"/>
+            </StackPanel>
+
+            <Button Margin="0,40,0,0"
+                    Click="{x:Bind ViewModel.BeginProcessing}">Begin Processing</Button>
+        </StackPanel>
+
+    </StackPanel>
+</Page>

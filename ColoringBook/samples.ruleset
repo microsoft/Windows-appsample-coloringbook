@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Rules for samples" Description="Code analysis rules for sample apps." ToolsVersion="15.0">
+  <IncludeAll Action="Warning" />
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="CA1014" Action="None" />
+    <Rule Id="CA1026" Action="None" />
+    <Rule Id="CA1045" Action="None" />
+    <Rule Id="CA1062" Action="None" />
+    <Rule Id="CA1304" Action="None" />
+    <Rule Id="CA1305" Action="None" />
+    <Rule Id="CA1306" Action="None" />
+    <Rule Id="CA2210" Action="None" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
+    <Rule Id="CS8019" Action="Warning" />
+    <Rule Id="CS8020" Action="Warning" />
+    <Rule Id="CS8040" Action="Warning" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.EditorFeatures" RuleNamespace="Microsoft.CodeAnalysis.CSharp.EditorFeatures">
+    <Rule Id="IDE0032" Action="Warning" />
+    <Rule Id="IDE0032WithoutSuggestion" Action="Warning" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.Features" RuleNamespace="Microsoft.CodeAnalysis.CSharp.Features">
+    <Rule Id="IDE0001" Action="Warning" />
+    <Rule Id="IDE0002" Action="Warning" />
+    <Rule Id="IDE0003" Action="Warning" />
+    <Rule Id="IDE0004" Action="Warning" />
+    <Rule Id="IDE0005" Action="Warning" />
+    <Rule Id="IDE0007" Action="Warning" />
+    <Rule Id="IDE0007WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0008" Action="Warning" />
+    <Rule Id="IDE0008WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0009" Action="Warning" />
+    <Rule Id="IDE0009WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0011" Action="Warning" />
+    <Rule Id="IDE0011WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0012" Action="Warning" />
+    <Rule Id="IDE0013" Action="Warning" />
+    <Rule Id="IDE0014" Action="Warning" />
+    <Rule Id="IDE0015" Action="Warning" />
+    <Rule Id="IDE0016" Action="Warning" />
+    <Rule Id="IDE0016WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0017" Action="Warning" />
+    <Rule Id="IDE0017WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0018" Action="Warning" />
+    <Rule Id="IDE0018WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0019" Action="Warning" />
+    <Rule Id="IDE0019WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0020" Action="Warning" />
+    <Rule Id="IDE0020WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0021" Action="Warning" />
+    <Rule Id="IDE0022" Action="Warning" />
+    <Rule Id="IDE0023" Action="Warning" />
+    <Rule Id="IDE0024" Action="Warning" />
+    <Rule Id="IDE0025" Action="Warning" />
+    <Rule Id="IDE0026" Action="Warning" />
+    <Rule Id="IDE0027" Action="Warning" />
+    <Rule Id="IDE0028" Action="Warning" />
+    <Rule Id="IDE0028WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0029" Action="Warning" />
+    <Rule Id="IDE0029WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0030" Action="Warning" />
+    <Rule Id="IDE0030WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0031" Action="Warning" />
+    <Rule Id="IDE0031WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0034" Action="Warning" />
+    <Rule Id="IDE0034WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE1005" Action="Warning" />
+    <Rule Id="IDE1005WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE1006" Action="Warning" />
+    <Rule Id="IDE1006WithoutSuggestion" Action="Warning" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.Features" RuleNamespace="Microsoft.CodeAnalysis.Features">
+    <Rule Id="IDE0010" Action="Warning" />
+    <Rule Id="IDE0010WithoutSuggestion" Action="Warning" />
+    <Rule Id="IDE0033" Action="Warning" />
+    <Rule Id="IDE0033WithoutSuggestion" Action="Warning" />
+  </Rules>
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA1101" Action="None" />
+    <Rule Id="SA1116" Action="None" />
+    <Rule Id="SA1117" Action="None" />
+    <Rule Id="SA1118" Action="None" />
+    <Rule Id="SA1200" Action="None" />
+    <Rule Id="SA1201" Action="None" />
+    <Rule Id="SA1202" Action="None" />
+    <Rule Id="SA1203" Action="None" />
+    <Rule Id="SA1204" Action="None" />
+    <Rule Id="SA1214" Action="None" />
+    <Rule Id="SA1309" Action="None" />
+    <Rule Id="SA1310" Action="None" />
+    <Rule Id="SA1412" Action="Warning" />
+    <Rule Id="SA1600" Action="None" />
+    <Rule Id="SA1601" Action="None" />
+    <Rule Id="SA1602" Action="None" />
+    <Rule Id="SA1604" Action="None" />
+    <Rule Id="SA1605" Action="None" />
+    <Rule Id="SA1606" Action="None" />
+    <Rule Id="SA1607" Action="None" />
+    <Rule Id="SA1608" Action="None" />
+    <Rule Id="SA1610" Action="None" />
+    <Rule Id="SA1611" Action="None" />
+    <Rule Id="SA1612" Action="None" />
+    <Rule Id="SA1613" Action="None" />
+    <Rule Id="SA1614" Action="None" />
+    <Rule Id="SA1615" Action="None" />
+    <Rule Id="SA1616" Action="None" />
+    <Rule Id="SA1617" Action="None" />
+    <Rule Id="SA1618" Action="None" />
+    <Rule Id="SA1619" Action="None" />
+    <Rule Id="SA1620" Action="None" />
+    <Rule Id="SA1621" Action="None" />
+    <Rule Id="SA1622" Action="None" />
+    <Rule Id="SA1623" Action="None" />
+    <Rule Id="SA1624" Action="None" />
+    <Rule Id="SA1625" Action="None" />
+    <Rule Id="SA1626" Action="None" />
+    <Rule Id="SA1627" Action="None" />
+    <Rule Id="SA1633" Action="None" />
+    <Rule Id="SA1634" Action="None" />
+    <Rule Id="SA1635" Action="None" />
+    <Rule Id="SA1636" Action="None" />
+    <Rule Id="SA1637" Action="None" />
+    <Rule Id="SA1638" Action="None" />
+    <Rule Id="SA1640" Action="None" />
+    <Rule Id="SA1641" Action="None" />
+    <Rule Id="SA1642" Action="None" />
+    <Rule Id="SA1643" Action="None" />
+    <Rule Id="SA1648" Action="None" />
+    <Rule Id="SA1651" Action="None" />
+    <Rule Id="SA1652" Action="None" />
+    <Rule Id="SX1101" Action="Warning" />
+  </Rules>
+</RuleSet>

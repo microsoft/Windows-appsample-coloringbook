@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ErrorDialog.Content" xml:space="preserve">
+    <value>There was an error loading your Coloring. Please reload or delete this Coloring. If you delete this Coloring, you will not be able to recover it.</value>
+    <comment>Error dialog description to user</comment>
+  </data>
+  <data name="ErrorDialog.DeleteButtonText" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Error dialog option 2 - this will delete the dialog</comment>
+  </data>
+  <data name="ErrorDialog.IgnoreButtonText" xml:space="preserve">
+    <value>Ignore</value>
+    <comment>Error dialog option 1 - this will dismiss the error dialog</comment>
+  </data>
+  <data name="ErrorDialog.Title" xml:space="preserve">
+    <value>Error Loading Coloring.</value>
+    <comment>Error dialog presented to user when their coloring fails to load</comment>
+  </data>
+  <data name="FileName.ColorPaletteFileName" xml:space="preserve">
+    <value>color.coloringbooksettings</value>
+    <comment>FileName</comment>
+  </data>
+  <data name="FileName.UserSettings" xml:space="preserve">
+    <value>user.coloringbooksettings</value>
+    <comment>FileName</comment>
+  </data>
+  <data name="FilePicker.FileTypeChoice" xml:space="preserve">
+    <value>.png</value>
+    <comment>When exporting the Coloring this is the default (and only) image file type to save as</comment>
+  </data>
+  <data name="FilePicker.FileTypeChoiceHelper" xml:space="preserve">
+    <value>Image</value>
+    <comment>Helper text for user when choosing export file type</comment>
+  </data>
+  <data name="FileType.inkFileType" xml:space="preserve">
+    <value>.gif</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="FileType.jpeg" xml:space="preserve">
+    <value>.jpeg</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="FileType.jpg" xml:space="preserve">
+    <value>.jpg</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="FileType.png" xml:space="preserve">
+    <value>.png</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="FileType.preprocessing" xml:space="preserve">
+    <value>.preprocessing</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="FileType.secondarySaveFile" xml:space="preserve">
+    <value>.backup</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="FileType.settings" xml:space="preserve">
+    <value>.settings</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="FileType.tapToFillType" xml:space="preserve">
+    <value>.taptofill</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="FileType.thumbnail" xml:space="preserve">
+    <value>.thumbnail</value>
+    <comment>File Type</comment>
+  </data>
+  <data name="Printer.Crop" xml:space="preserve">
+    <value>Crop</value>
+    <comment>Printer scaling option</comment>
+  </data>
+  <data name="Printer.PhotoSizeError" xml:space="preserve">
+    <value>Photo doesn’t fit on the selected paper</value>
+  </data>
+  <data name="Printer.PrintingTask" xml:space="preserve">
+    <value>ColoringBook Print</value>
+    <comment>Printer Task Name</comment>
+  </data>
+  <data name="Printer.ScalingHeading" xml:space="preserve">
+    <value>Scaling</value>
+    <comment>Printer dropdown box heading</comment>
+  </data>
+  <data name="Printer.Shrink" xml:space="preserve">
+    <value>Shrink To Fit</value>
+    <comment>Printer scaling option</comment>
+  </data>
+  <data name="Printer.Size4x6" xml:space="preserve">
+    <value>4 x 6 in</value>
+    <comment>Printer Sizing Name: 4 x 6 inches</comment>
+  </data>
+  <data name="Printer.Size5x7" xml:space="preserve">
+    <value>5 x 7 in</value>
+    <comment>Printer Sizing Name: 5 x 7 inches</comment>
+  </data>
+  <data name="Printer.Size8x10" xml:space="preserve">
+    <value>8 x 10 in</value>
+    <comment>Printer Sizing Name: 8 x 10 inches</comment>
+  </data>
+  <data name="Printer.SizeFullPage" xml:space="preserve">
+    <value>Full Page</value>
+    <comment>Printer Sizing Name: Full Page</comment>
+  </data>
+  <data name="Printer.SizeHeading" xml:space="preserve">
+    <value>Photo Size</value>
+    <comment>Printer dropdown box heading</comment>
+  </data>
+  <data name="RadialDial.ColorPicker" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="RadialDial.PenPicker" xml:space="preserve">
+    <value>Pens</value>
+  </data>
+  <data name="RadialDial.StrokeThickness" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Sharing.ShareDescription" xml:space="preserve">
+    <value>Share your ColoringBook masterpiece!</value>
+    <comment>Sharing description to the user of what is happening - that they are wanting to share their Coloring</comment>
+  </data>
+  <data name="Sharing.ShareTitle" xml:space="preserve">
+    <value>ColoringBook</value>
+    <comment>Sharing Coloring Title</comment>
+  </data>
+  <data name="LibraryPivotItem.Header" xml:space="preserve">
+    <value>Library</value>
+    <comment>Pivot Heading</comment>
+  </data>
+  <data name="MyArtworkPivotItem.Header" xml:space="preserve">
+    <value>My Artwork</value>
+    <comment>Pivot Heading</comment>
+  </data>
+  <data name="SelectAppBarButton.Label" xml:space="preserve">
+    <value>Select</value>
+    <comment>App Bar Button Text for Select on Home Page</comment>
+  </data>
+  <data name="SettingsAppBarButton.Icon" xml:space="preserve">
+    <value>Setting</value>
+    <comment>App Bar Button Icon Name</comment>
+  </data>
+  <data name="SettingsAppBarButton.Label" xml:space="preserve">
+    <value>Settings</value>
+    <comment>App Bar Button Text for settings on home screen</comment>
+  </data>
+  <data name="Printer.ErrorMessage" xml:space="preserve">
+    <value>Coloring failed to print.</value>
+    <comment>Error message user recieves when printing fails</comment>
+  </data>
+  <data name="DeleteAppBarButton.Icon" xml:space="preserve">
+    <value>Delete</value>
+    <comment>App Bar Button Icon Name</comment>
+  </data>
+  <data name="DeleteAppBarButton.Label" xml:space="preserve">
+    <value>Delete ink</value>
+    <comment>App Bar Button Text for settings on home screen</comment>
+  </data>
+  <data name="Dialog.Deleting" xml:space="preserve">
+    <value>Deleting...</value>
+    <comment>Text to display inside the deleting dialog when colorings are being deleted.</comment>
+  </data>
+  <data name="Dialog.Loading" xml:space="preserve">
+    <value>Loading...</value>
+    <comment>Text to display inside the loading dialog of the coloring page when a coloring is loading.</comment>
+  </data>
+  <data name="DeleteMultipleDialog.CancelText" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Delete multiple colorings dialog cancel delete text</comment>
+  </data>
+  <data name="DeleteMultipleDialog.Content" xml:space="preserve">
+    <value>Are you sure you want to delete the selected colorings?</value>
+    <comment>Delete multiple colorings dialog content to ask the user if they are sure they wish to go through with their delete</comment>
+  </data>
+  <data name="DeleteMultipleDialog.OkText" xml:space="preserve">
+    <value>Ok</value>
+    <comment>Delete multiple colorings dialog confirmation to delete text</comment>
+  </data>
+  <data name="DeleteMultipleDialog.Title" xml:space="preserve">
+    <value>Deleting Colorings</value>
+    <comment>Delete multiple colorings dialog title</comment>
+  </data>
+  <data name="CancelAppBarButton.Icon" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>App Bar Button Icon Name</comment>
+  </data>
+  <data name="CancelAppBarButton.Label" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>App Bar Button Text for settings on home screen</comment>
+  </data>
+  <data name="EmptyMyArtwork.DescriptionFinal.Text" xml:space="preserve">
+    <value>tab and select a template to get started.</value>
+    <comment>Full text in [3 parts]: [Click on the ][Library][ tab and select a template to get started.]</comment>
+  </data>
+  <data name="EmptyMyArtwork.DescriptionInitial.Text" xml:space="preserve">
+    <value>Click on the</value>
+    <comment>Full text in [3 parts]: [Click on the] [Library] [tab and select a template to get started.]</comment>
+  </data>
+  <data name="EmptyMyArtwork.HyperlinkRun.Text" xml:space="preserve">
+    <value>Library</value>
+    <comment>Full text in [3 parts]: [Click on the] [Library] [tab and select a template to get started.]</comment>
+  </data>
+  <data name="EmptyMyArtwork.Title.Text" xml:space="preserve">
+    <value>See your artwork here</value>
+    <comment>Empty MyArtwork Page heading</comment>
+  </data>
+  <data name="SettingsFlyout.ResetButton.Content" xml:space="preserve">
+    <value>Reset colors</value>
+    <comment>Reset color palette button text</comment>
+  </data>
+  <data name="SettingsFlyout.ResetDescription.Text" xml:space="preserve">
+    <value>Change the color palette back to the default setting.</value>
+    <comment>Description of what the reset color palette button will do</comment>
+  </data>
+  <data name="SettingsFlyout.ResetHeading.Text" xml:space="preserve">
+    <value>Reset color palette</value>
+    <comment>Text to inform user they can reset their color palettes</comment>
+  </data>
+  <data name="SettingsFlyout.Title.Text" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Title for settings flyout</comment>
+  </data>
+  <data name="FileName.DefaultThumbnailFileName" xml:space="preserve">
+    <value>DefaultThumbnail.png</value>
+    <comment>FileName</comment>
+  </data>
+  <data name="PrintAppBarButton.Label" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="RedoAppBarButton.Label" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="SaveAsAppBarButton.Label" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="ShareAppBarButton.Label" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="UndoAppBarButton.Label" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="RedoAppBarButton.Icon" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="UndoAppBarButton.Icon" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="CancelAppBarButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DeleteAppBarButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Delete all ink in coloring</value>
+  </data>
+  <data name="RedoAppBarButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="SaveAsAppBarButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="SelectAppBarButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SettingsAppBarButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="UndoAppBarButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+</root>

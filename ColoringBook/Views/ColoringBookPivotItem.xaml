@@ -1,0 +1,131 @@
+﻿<!--  
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// The MIT License (MIT)
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE. 
+-->
+
+<PivotItem x:Class="ColoringBook.Views.ColoringBookPivotItem"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:local="using:ColoringBook.Views"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:common="using:ColoringBook.Common"
+           xmlns:components="using:ColoringBook.Components"
+           xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+           mc:Ignorable="d">
+
+    <PivotItem.Resources>
+        
+        <DataTemplate x:Key="ArtworkLoadingTemplate">
+            <ProgressRing IsActive="True" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="ArtworkHeroTemplate">
+            <controls:DropShadowPanel BlurRadius="2"
+                                  ShadowOpacity="0.2"
+                                  OffsetX="2.5"
+                                  OffsetY="2.5"
+                                  Color="Black">
+                <Image Source="{Binding ThumbnailImage, Mode=OneWay}" />
+            </controls:DropShadowPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ArtworkTemplate">
+            <controls:DropShadowPanel BlurRadius="2"
+                                  ShadowOpacity="0.2"
+                                  OffsetX="2.5"
+                                  OffsetY="2.5"
+                                  Color="Black">
+                <Image Source="{Binding ThumbnailImage, Mode=OneWay}" />
+            </controls:DropShadowPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ArtworkErrorTemplate">
+            <Grid>
+                <TextBlock x:Name="textDelete"
+                       FontFamily="Segoe MDL2 Assets"
+                       Text="&#xE7BA;"
+                       FontSize="50px"
+                       Foreground="Yellow"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+
+        <local:ArtworkTemplateSelector x:Key="ArtworkTemplateSelector"
+                                        ArtworkLoadingTemplate="{StaticResource ArtworkLoadingTemplate}"
+                                        ArtworkHeroTemplate="{StaticResource ArtworkHeroTemplate}"
+                                        ArtworkTemplate="{StaticResource ArtworkTemplate}"
+                                        ArtworkErrorTemplate="{StaticResource ArtworkErrorTemplate}">
+        </local:ArtworkTemplateSelector>
+
+    </PivotItem.Resources>
+
+    <Grid>
+        
+        <components:VariableSizedGridView x:Name="ThumbnailGridView"
+                                     ItemTemplateSelector="{StaticResource ArtworkTemplateSelector}"
+                                     SelectionMode="{x:Bind SelectionMode, Mode=OneWay}"
+                                     IsMultiSelectCheckBoxEnabled="True"
+                                     IsItemClickEnabled="{x:Bind common:Tools.Not(IsMultiSelectEnabled), Mode=OneWay}"
+                                     ItemClick="NonSelectionMode_OnItemClick"
+                                     ItemsSource="{x:Bind ViewModel.ThumbnailsSource, Mode=OneWay}"
+                                     ItemContainerStyle="{StaticResource GridViewItemStyles}"
+                                     SelectedItemsList="{x:Bind ViewModel.SelectedThumbnails, Mode=TwoWay}"
+                                     SelectionChanged="{x:Bind ViewModel.ThumbnailGridView_OnSelectionChanged}">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VariableSizedWrapGrid Orientation="Horizontal"
+                                           ItemHeight="126"
+                                           ItemWidth="223" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+        </components:VariableSizedGridView>
+
+        <Grid x:Name="EmptyArtworkScreen"
+              x:Load="{x:Bind ViewModel.DisplayEmptyArtworkScreen, Mode=OneWay}"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Center"
+              Margin="0 0 0 100">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <FontIcon Glyph="&#xE790;"
+                          FontSize="48"
+                          Margin="0,0,0,12" />
+                <TextBlock x:Uid="EmptyMyArtwork/Title"
+                           Style="{StaticResource SubheaderTextBlockStyle}"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,24" />
+                <TextBlock HorizontalAlignment="Center">
+                    <Run x:Uid="EmptyMyArtwork/DescriptionInitial" />
+                    <Hyperlink Click="Hyperlink_OnClick">
+                        <Run x:Uid="EmptyMyArtwork/HyperlinkRun" />
+                    </Hyperlink>
+                    <Run x:Uid="EmptyMyArtwork/DescriptionFinal" />
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+    
+</PivotItem>
+

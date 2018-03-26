@@ -1,8 +1,9 @@
 ### YamlMime:Sample
 sample:
 - name: Coloring book sample
-  description: A mini-app that explores Windows Ink and Monetization features using the Microsoft Store.
-  image: Screenshots/Using_Ink_In_Your_UWP_App_Video.PNG
+  description: A mini-app that demonstrates the versatility of Windows Ink (including the Windows Ink Toolbar)
+and radial controller (for Wheel devices such as the Surface Dial) features.
+  image: screenshot.png
   generateZip: true
   author: karler
   languages:
