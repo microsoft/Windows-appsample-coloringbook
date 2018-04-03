@@ -11,3 +11,4 @@ and radial controller (for Wheel devices such as the Surface Dial) features.
   - xaml
   technologies:
   - windows
+  vssolution: ColoringBook.sln
