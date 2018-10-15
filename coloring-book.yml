@@ -8,7 +8,6 @@ and radial controller (for Wheel devices such as the Surface Dial) features.
   author: karler
   languages:
   - csharp
-  - xaml
   technologies:
   - windows
   vssolution: ColoringBook.sln
