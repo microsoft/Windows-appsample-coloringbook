@@ -5,7 +5,7 @@ sample:
 and radial controller (for Wheel devices such as the Surface Dial) features.
   image: screenshot.png
   generateZip: true
-  author: karler
+  author: KarlErickson
   languages:
   - csharp
   technologies:
