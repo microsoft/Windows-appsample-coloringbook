@@ -1,8 +1,4 @@
-﻿<!---
-  category: CustomUserInteractions Inking Printing FilesFoldersAndLibraries
--->
-
----
+﻿---
 topic: sample
 languages:
 - csharp
