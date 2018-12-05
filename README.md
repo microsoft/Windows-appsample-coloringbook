@@ -2,6 +2,17 @@
   category: CustomUserInteractions Inking Printing FilesFoldersAndLibraries
 -->
 
+---
+topic: sample
+languages:
+- csharp
+products:
+- windows
+- uwp
+statusNotificationTargets:
+- codefirst
+---
+
 # Coloring Book sample
 
 A mini-app that demonstrates the versatility of Windows Ink (including the Windows Ink Toolbar)
