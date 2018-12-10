@@ -1,4 +1,4 @@
----
+﻿---
 topic: sample
 languages:
 - csharp
@@ -8,6 +8,10 @@ products:
 statusNotificationTargets:
 - codefirst
 ---
+
+<!---
+  category: CustomUserInteractions Inking Printing FilesFoldersAndLibraries
+-->
 
 # Coloring Book sample
 
