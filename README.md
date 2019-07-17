@@ -7,6 +7,8 @@ products:
 - windows-uwp
 statusNotificationTargets:
 - codefirst@microsoft.com
+description: "A mini-app that demonstrates the versatility of Windows Ink (including the Windows Ink Toolbar)
+and radial controller (for Wheel devices such as the Surface Dial) features."
 ---
 
 <!---
