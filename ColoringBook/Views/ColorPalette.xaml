@@ -30,6 +30,7 @@
     xmlns:common="using:ColoringBook.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:MUXC="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400"
@@ -39,7 +40,7 @@
         <Flyout x:Name="ColorPickerFlyout"
                 Placement="Top">
             <StackPanel>
-                <ColorPicker x:Name="ColorPicker" 
+                <MUXC:ColorPicker x:Name="ColorPicker" 
                              IsColorChannelTextInputVisible="True"
                              IsHexInputVisible="True"/>
                 <Grid HorizontalAlignment="Stretch">

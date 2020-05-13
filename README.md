@@ -1,4 +1,4 @@
----
+﻿---
 page_type: sample
 languages:
 - csharp
@@ -13,13 +13,11 @@ statusNotificationTargets:
   category: CustomUserInteractions Inking Printing FilesFoldersAndLibraries
 -->
 
-# Coloring Book sample
+# Coloring Book sample (updated to WinUI 2.4 - May 2020)
 
 A mini-app that demonstrates the versatility of Windows Ink (including the Windows Ink Toolbar)
-and radial controller (for Wheel devices such as the Surface Dial) features.
+and radial controller (for Wheel devices such as the Surface Dial) features. 
  
-> Note - This sample is targeted and tested for Windows 10, version 2004 (10.0; Build 19569), and Visual Studio 2019. If you prefer, you can use project properties to retarget the project(s) to Windows 10, version 1903 (10.0; Build 18362).
-
 Using the extensive customization features provided by the inking and radial controller APIs, 
 this sample app incorporates coloring book functionality (line art, standard inking tools such 
 as pen and pencil), a custom Ink Toolbar that features additional tools (flood fill, 
@@ -47,19 +45,26 @@ The Coloring Book sample includes the following features:
 
 This sample does not cover Windows Ink Analysis.
 
+## May 2020 update
+
+The current version of this sample includes updates to support WinUI 2.4 (including ColorPicker, ProgressBar, and ProgressRing). 
+
+> Note - This sample is targeted and tested for Windows 10, version 2004 (10.0; Build 19569), and Visual Studio 2019. 
+If you prefer, you can use project properties to retarget the project(s) to Windows 10, version 1903 (10.0; Build 18362). 
+
+For a simpler inking sample, see [Coloring Book V1](https://github.com/Microsoft/Windows-appsample-coloringbook/releases/tag/v1.0).
+
 ## March 2018 update
 
-The current version of this sample includes extensive architecture, code, and functional improvements
+This version of the sample includes extensive architecture, code, and functional improvements
 over the previous version. These updates necessarily make the sample more complicated. For a simpler inking 
 sample, see [Coloring Book V1](https://github.com/Microsoft/Windows-appsample-coloringbook/releases/tag/v1.0).
 
-## Universal Windows Platform development
+## UWP development
 
-### Prerequisites
-
-- Windows 10. Minimum: Windows 10, version 1809 (10.0; Build 17763), also known as the Windows 10 October 2018 Update.
-- [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Minimum: Windows SDK version 10.0.17763.0 (Windows 10, version 1809).
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/) (or Visual Studio 2017). You can use the free Visual Studio Community Edition to build and run Windows Universal Platform (UWP) apps.
+This sample requires [Visual Studio 2019, the Microsoft.UI.Xaml 2.4 nuget package, 
+and the latest version of the Windows 10 SDK](http://go.microsoft.com/fwlink/?LinkID=280676). 
+You can use the free Visual Studio Community Edition to build and run Windows Universal Platform (UWP) apps. 
 
 To get the latest updates to Windows and the development tools, and to help shape their development, join 
 the [Windows Insider Program](https://insider.windows.com).
@@ -189,5 +194,3 @@ and related [sample](https://github.com/Microsoft/Windows-tutorials-inputs-and-d
 * [Ink Analysis (C#)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/InkAnalysis)
 * [Complex ink sample (C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
 * [Ink sample (JavaScript)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Ink)
-
-

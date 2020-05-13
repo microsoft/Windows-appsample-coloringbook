@@ -28,12 +28,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:MUXC="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <Grid>
         <StackPanel HorizontalAlignment="Stretch"  VerticalAlignment="Center">
             <TextBlock x:Name="TextBlock" HorizontalAlignment="Center" Text="Processing... (This could take up to 10 minutes for extremely large images)" Padding="0,0,0,20"></TextBlock>
-            <ProgressBar IsIndeterminate="True"></ProgressBar>
+            <MUXC:ProgressBar IsIndeterminate="True"></MUXC:ProgressBar>
         </StackPanel>
     </Grid>
 </ContentDialog>
