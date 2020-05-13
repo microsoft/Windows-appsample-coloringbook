@@ -31,12 +31,13 @@
            xmlns:common="using:ColoringBook.Common"
            xmlns:components="using:ColoringBook.Components"
            xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+           xmlns:MUXC="using:Microsoft.UI.Xaml.Controls"
            mc:Ignorable="d">
 
     <PivotItem.Resources>
         
         <DataTemplate x:Key="ArtworkLoadingTemplate">
-            <ProgressRing IsActive="True" />
+            <MUXC:ProgressRing IsIndeterminate="True" Height="50" Width="50" Foreground="Blue" />
         </DataTemplate>
 
         <DataTemplate x:Key="ArtworkHeroTemplate">
