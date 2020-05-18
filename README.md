@@ -49,7 +49,7 @@ This sample does not cover Windows Ink Analysis.
 
 The current version of this sample includes updates to support WinUI 2.4 (including ColorPicker, ProgressBar, and ProgressRing). 
 
-> Note - This sample is targeted and tested for Windows 10, version 2004 (10.0; Build 19569), and Visual Studio 2019. 
+> Note - This sample is targeted and tested for Windows 10, version 2004 (10.0; Build 19041), and Visual Studio 2019. 
 If you prefer, you can use project properties to retarget the project(s) to Windows 10, version 1903 (10.0; Build 18362). 
 
 For a simpler inking sample, see [Coloring Book V1](https://github.com/Microsoft/Windows-appsample-coloringbook/releases/tag/v1.0).
